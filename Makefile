@@ -1,5 +1,5 @@
 build:
-	pdflatex -pdf main.tex
+	pdflatex -pdf --shell-escape main.tex
 
 view:
 	xpdf main.pdf
