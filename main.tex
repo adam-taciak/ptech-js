@@ -1,12 +1,39 @@
 \documentclass{beamer}
 
+\usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{minted}
+
+\usecolortheme{crane}
+
+% Minted configuration
+\setminted{frame=single}
+\setminted{linenos=true}
+
+% On each section, add extra slide with section name
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=10pt,center]{title}
+      \usebeamerfont{title}\insertsectionhead\par
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
 
 \title{P-Tech}
 \author{Adam Taciak}
 \institute{Fujitsu}
 \date{Styczeń 2021}
 
+
 \begin{document}
+
+\frame{\titlepage}
+
+\input{01-introduction}
+\input{02-hello-world}
+\input{03-variables}
 
 \end{document}
