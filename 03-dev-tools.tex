@@ -73,4 +73,42 @@
 \end{frame}
 
 
+\begin{frame}[fragile]
+  \frametitle{Narzędzia programisty}
+  \framesubtitle{Obiekt console}
+
+  W trakcie tworzenia aplikacja, pojawia się potrzeba logwania róznych zdarzeń. Do tego celu służy obiekt \verb|console|.
+
+  {\footnotesize
+    \begin{itemize}
+      \item \verb|console.log(obj1 [,obj2, ..., objN])| --- logowanie
+      \item \verb|console.warn(obj1 [,obj2, ..., objN])| --- ostrzeżenie
+      \item \verb|console.info(obj1 [,obj2, ..., objN])| --- informacja
+      \item \verb|console.error(obj1 [,obj2, ..., objN])| --- błąd
+    \end{itemize}
+  }
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Narzędzia programisty}
+  \framesubtitle{Obiekt console}
+
+  Wszystkie metody działają bardzo podobnie. Wyświetlają przekazany argument w konsoli:
+
+  \begin{minted}{js}
+console.log('Ala ma kota');
+console.info('Ala', 'ma', 'kota');
+console.warn('Ala ma', 14, 'lat');
+console.error('Kot ma Alę');
+  \end{minted}
+
+  \begin{figure}
+    \includegraphics[scale=0.45]{images/dev-tools-console-example}
+  \end{figure}
+
+
+\end{frame}
+
+
 
