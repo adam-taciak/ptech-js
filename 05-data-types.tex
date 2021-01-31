@@ -1,0 +1,155 @@
+\section{Typy danych}
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{Wprowadzenie}
+
+  Wartość w języku \textbf{JavaScript} zawsze ma określony typ. 
+
+  \begin{itemize}
+    \item \verb|number| --- liczby
+    \item \verb|bigInt| --- duże liczby
+    \item \verb|string| --- ciągi znakowe
+    \item \verb|boolean| --- wartość prawda/fałsz
+    \item wartosć \verb|null| --- wartość pusta
+    \item wartość \verb|undefined| --- wartość niezainicjalizowana
+    \item \verb|object| --- objekt
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{number}
+
+ Typ \verb|number| przechowuje liczbę:
+
+  \begin{minted}{js}
+let liczba_a = 123;
+let liczba_b = 12.3; 
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{number}
+
+ Na typie \verb|number| można wykonywać operacje matematyczne:
+
+  \begin{minted}{js}
+let a = 10 + 2;
+let b = 20 - 2;
+let c = 5 * 5;
+let d = 16 / 8;
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{string}
+
+ Typ \verb|string| przechowuje łańcuch znakowy:
+
+  \begin{minted}{js}
+let napis_a = 'Ala ma kota';
+let napis_b = "Ala ma psa";
+let napis_c = `Ala ma chomika`;
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{string}
+
+ Na typie \verb|string| można wykonywać operację konkatenacji (łączenia):
+
+  \begin{minted}{js}
+let napis = 'Ala ' + 'ma' + ' kota';
+  \end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{boolean}
+
+ Typ \verb|boolean| przechowuje informację prawdwa/fałsz:
+
+  \begin{minted}{js}
+let prawda = true;
+let falsz = false;
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{string}
+
+ Typ \verb|boolean| najczęściej będziemy używać przy konstrukcjach warunkowych:
+
+  \begin{minted}{js}
+let czyPelnoletni = false;
+if (czyPelnoletni) {
+  alert('Użytkownik jest pełnoletni');
+}
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{null}
+
+ Wartość \verb|null| oznacza nic, brak danych:
+
+  \begin{minted}{js}
+let napis = null;
+  \end{minted}
+
+  Zmienna \verb|napis| przechowuje informację o braku informacji.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{undefined}
+
+ Wartość \verb|undefined| oznacza, iż zmienna pozostaje niezainicjalizowana:
+
+  \begin{minted}{js}
+let napis;
+console.log(napis);
+  \end{minted}
+
+  Zmienna \verb|napis| została zadeklarowana, jednak jej początkowa wartość pozostaje nieokreślona.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Typy danych}
+  \framesubtitle{object}
+
+ Typ \verb|object| jest typem złożonym
+
+  \begin{minted}{js}
+let samochod = {
+  marka: 'Porsche',
+  model: '911 Turbo',
+  predkoscMax: 210
+}
+  \end{minted}
+
+  Zmienna \verb|samochod| reprezentuje obiekt zbudowany z 3 pól (typów prostych).
+
+\end{frame}
