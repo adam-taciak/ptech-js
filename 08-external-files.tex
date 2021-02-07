@@ -1,0 +1,154 @@
+\section{Osadzanie JavaScript}
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{Wprowadzenie}
+
+  Kod \textbf{JavaScript} możemy osadzać w kodzie \textbf{HTML} na kilka sposobów:
+
+  \begin{itemize}
+    \item wewnątrz zdarzeń \verb|onclick=""|
+    \item wewnątrz tagu \verb|<script></script>|
+    \item w zewnętrzych plikach \verb|<script src="nazwa.js"></script>|
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{Wprowadzenie}
+
+  Podobnie jak z \textbf{CSS}, kod \textbf{JavaScrip} warto umieścić w zewnętrznym pliku:
+
+  \begin{itemize}
+    \item logiczne rozdzielenie \textbf{HTML}, \textbf{CSS}, \textbf{JS}
+    \item większa czytelność \textbf{HTML}, \textbf{JavaScript}
+    \item uproszczenie kody, podział między pliki
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{Przypomnienie}
+
+  Przypomnienie --- zdarzenia:
+
+  \begin{minted}{html}
+<button onclick="alert('Witaj!');">
+  Kliknij mnie!
+</button>
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{Przypomnienie}
+
+  Przypomnienie --- \verb|<script></script>|:
+
+  \begin{minted}{html}
+<head>
+  <script>
+    alert('Witaj świecie');
+  </script>
+</head>
+
+<body>
+  <script>
+    alert('Witaj świecie');
+  </script>
+</body>
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{JS z pliku}
+
+  Podział na pliki:
+
+  Kod \textbf{JavaScript} w pliku \verb|nazwa.js|
+  \begin{minted}{js}
+alert('Witaj!');
+  \end{minted}
+
+  Kod \textbf{HTML}
+  \begin{minted}{html}
+<head>
+  <script src="nazwa.js"></script>
+</head>
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{JS z pliku}
+
+  Bardzo dobrą praktyką jest dodawanie atrybutu \textbf{type}.
+
+  \begin{itemize}
+    \item \textbf{type} informuje przeglądarkę o oczekiwanej zawartości
+    \item wartość \textbf{application/javascript} oznacza skrypt w \textbf{JavaScript}
+  \end{itemize}
+
+  \begin{minted}{html}
+<head>
+  <script src="nazwa.js" type="application/javascript">
+  </script>
+</head>
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{JS z pliku}
+
+  W chwili załadowania pliku tagiem:
+
+  \begin{minted}{html}
+<script src="plik.js"
+  type="application/javascript">
+</script>
+  \end{minted}
+
+  Kod staje się dostępny w całej aplikacji.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Osadzanie JavaScript}
+  \framesubtitle{JS z pliku}
+
+  \textbf{JavaScript} plik \verb|plik.js|:
+
+  \begin{minted}{js}
+let imie = 'Adam';
+let wiek = 34;
+  \end{minted}
+
+  \textbf{HTML}:
+
+  \begin{minted}{html}
+<head>
+  <script src="plik.js" type="application/javascript">
+  </script>
+</head>
+<body>
+  <button onclick="alert('Witaj' + ' ' + imie);">
+  </button>
+</body>
+  \end{minted}
+
+\end{frame}
