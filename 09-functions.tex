@@ -1,0 +1,204 @@
+\section{Funkcje}
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Wprowadzenie}
+
+  Funkcji używamy do podziału programu na mniejsze logiczne jednostki:
+
+  \begin{itemize}
+    \item zwiększenie czytelności programu
+    \item unikanie duplikacji kodu
+    \item łatwiejsze utrzymanie
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Wywoływanie funkcji}
+
+  Wywoływanie funkcjiw \textbf{JavaScript} odbywa się przez jej nazwę z dodaniem nawiasów:
+
+  \begin{minted}{js}
+alert( );
+  \end{minted}
+
+  Uwaga: jeżli pominiemy \verb|()| odwołamy się do obiektu funkcji!
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Wywoływanie funkcji}
+
+  Do funkcji argumenty przekazujemy wewnątrz nawiasów:
+
+  \begin{minted}{js}
+alert('Ala ma kota');
+  \end{minted}
+
+  Jeżeli funkcja nie przyjmuje argumentów, to nadal należy napisać \verb|()|.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  Tworzenie nowej funkcji odbywa się przez słowo kluczowe \verb|function|:
+
+  \begin{minted}{js}
+function nazwa() {
+
+}
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  Funkcja składa się z:
+  
+  \begin{itemize}
+    \item słowa \verb|function|
+    \item swojej nazwy
+    \item listy argumentów w \verb|()|
+    \item ciałem funkcji wewnątrz \verb|{}|
+  \end{itemize}
+
+  \begin{minted}{js}
+function nazwa() {
+
+}
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  \begin{minted}{js}
+function powiatanie_adam() {
+  alert('Witaj Adam!');
+}
+
+function powitanie_ewa() {
+  alert('Witaj Ewa!');
+}
+
+witaj_adam();
+witaj_ewa();
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  Funkcja może zwracać wartość, służy do tego słowo kluczowe \verb|return|:
+
+  \begin{minted}{js}
+function moj_wiek() {
+  return 17;
+}
+
+let wiek = moj_wiek();
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  Funkcja może przyjmować argumenty:
+
+  \begin{minted}{js}
+function powitanie(imie) {
+  alert('Witaj' + ' ' + imie);
+}
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Tworzenie funkcji}
+
+  Funkcja może przyjmować argumenty i zwracać wartość:
+
+  \begin{minted}{js}
+function suma(a, b) {
+  let wynik = a + b;
+  return wynik;
+}
+
+let obliczenie = suma(10, 20);
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Funkcja a zasięg zmiennych}
+
+  Funkcje posiadają własny zasięg (ang. scope) zmiennych:
+
+  \begin{minted}{js}
+function nazwa() {
+  let zmienna = 10;
+}
+
+alert(zmienna); // undefined
+  \end{minted}
+
+  Zmienne definiowane wewnątrz funkcji, nie są dostępne na zewnątrz.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Zastosowanie}
+
+  Do czego ta wiedza może się przydać? Od teraz możliwe będzie utrzymanie czystości i czytelności kodu:
+
+  \begingroup
+    \footnotesize
+
+  \begin{minted}{js}
+function skopiuj() {
+  let wejscie = document.getElementById('wejscie');
+  let wyjscie = document.getElementById('wyjscie');
+  wyjscie.input = wejscie.input;
+}
+  \end{minted}
+
+  \begin{minted}{html}
+<head>
+  <script src="skrypt.js"></script>
+</head>
+<body>
+  <input id="wejscie">
+  <input id="wyjscie">
+  <button onclick="skopiuj()"></button>
+</body>
+  \end{minted}
+
+  \endgroup
+
+\end{frame}
