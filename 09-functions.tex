@@ -202,3 +202,41 @@ function skopiuj() {
   \endgroup
 
 \end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Funkcje strzałkowe}
+
+  W języku \textbf{JavScript} istnieje jeszcze inny sposób tworzenia funkcji:
+
+  \begin{minted}{js}
+const witaj = () => alert('Witaj');
+  \end{minted}
+
+  Co odpowiada
+
+  \begin{minted}{js}
+function witaj() {
+  return alert('Witaj');
+}
+  \end{minted}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Funkcje}
+  \framesubtitle{Funkcje strzałkowe}
+
+  Są to \textbf{funkcje strzałkowe} (ang. arrow functions), w innych językach nazywane również funkcjami anonimowymi.
+
+  \begin{itemize}
+    \item są lukrem składniowym
+    \item skracają zapis
+    \item mogą zwiększać czytelność kodu
+    \item nie posiadają swojej nazwy
+    \item zawsze zwracają wartość
+  \end{itemize}
+
+\end{frame}
